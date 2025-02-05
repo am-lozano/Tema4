@@ -14,30 +14,18 @@ public class PrincipalRectangulo {
 		 * lados) y áreas (ancho x alto). Modifica todas las coordenadas como consideres
 		 * y vuelve a imprimir coordenadas, perímetros y áreas.
 		 */
+		
+		// Corrige el main para utilizar dicho constructor.
 
 		// instanciamos 2 objetos Rectangulo
-		Rectangulo rec1 = new Rectangulo();
-		Rectangulo rec2 = new Rectangulo();
+		Rectangulo rec1 = new Rectangulo(0, 5, 0, 5);
+		Rectangulo rec2 = new Rectangulo(0, 5, 0, 5);
 		
 		// variable para almacenar la medida de la base del rectangulo
 		int base;
 		
 		// variable para almacenar la altura del rectangulo
 		int altura;
-
-		// asignamos las coordenadas al primer objeto (rectangulo 1)
-		rec1.x1 = 0;
-		rec1.y1 = 0;
-
-		rec1.x2 = 5;
-		rec1.y2 = 5;
-
-		// asignamos las coordenadas al segundo objeto (rectangulo 2)
-		rec2.x1 = 7;
-		rec2.y1 = 9;
-
-		rec2.x2 = 2;
-		rec2.y2 = 3;
 
 		// mostramos las coordenadas
 		System.out.println(

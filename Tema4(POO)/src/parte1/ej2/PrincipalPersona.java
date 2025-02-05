@@ -22,6 +22,11 @@ public class PrincipalPersona {
 		 * modificar directamente los atributos.
 		 */
 
+		/*
+		 * Corrige el main para utilizar los getters y setters. Prueba a instanciar
+		 * varios objetos, mostrar sus valores por pantalla, modificarlos, etc.
+		 */
+
 		// variables para asignar valores a los atributos del objeto persona
 		String dni = "";
 		String nombre = "";

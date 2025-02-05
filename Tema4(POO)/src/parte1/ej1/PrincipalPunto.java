@@ -20,18 +20,23 @@ public class PrincipalPunto {
 		 * Corrige el main y utiliza el constructor con parámetros para instanciar los
 		 * objetos, pasándole como argumento los valores deseados.
 		 */
-		
+
+		/*
+		 * Corrige el main para utilizar los getters y setters. Prueba a instanciar
+		 * varios objetos, mostrar sus valores por pantalla, modificarlos, etc.
+		 */
+
 		// instaciamos los puntos
 		Punto A = new Punto(5, 0);
 		Punto B = new Punto(10, 10);
 		Punto C = new Punto(-3, 7);
 
 		// mostramos las coordenadas
-		System.out.println("Punto A: (" + A.x + ", " + A.y + ")");
+		System.out.println("Punto A: (" + A.getX() + ", " + A.getY() + ")");
 		System.out.println();
-		System.out.println("Punto B: (" + B.x + ", " + B.y + ")");
+		System.out.println("Punto B: (" + B.getX() + ", " + B.getY() + ")");
 		System.out.println();
-		System.out.println("Punto C: (" + C.x + ", " + C.y + ")");
+		System.out.println("Punto C: (" + C.getX() + ", " + C.getY() + ")");
 
 	}
 
