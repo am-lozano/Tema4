@@ -19,14 +19,21 @@ public class Rectangulo {
 	 * 
 	 */
 
+	/*
+	 * Aplica el encapsulamiento básico a la clase Rectángulo: Declara todos sus
+	 * atributos como private y crea todos los getters y setters necesarios (un get
+	 * y un set por atributo). Los setters deben comprobar que el valor pasado como
+	 * argumento es válido antes de guardarlo.
+	 */
+
 	// atributos de la clase Rectangulo para la coordenada x
-	int x1;
-	int x2;
+	private int x1;
+	private int x2;
 
 	// atributos de la clase Rectangulo para la coordenada y
-	int y1;
-	int y2;
-	
+	private int y1;
+	private int y2;
+
 	/**
 	 * Constructor para comprobar que los datos son correctos
 	 * 
@@ -35,18 +42,94 @@ public class Rectangulo {
 	 * @param y1 coordenada Y del primer punto
 	 * @param y2 coordenada Y del segundo punto
 	 */
-	public Rectangulo (int x1, int x2, int y1, int y2) {
-		
+	public Rectangulo(int x1, int x2, int y1, int y2) {
+
 		if (x2 > x1) { // comprobamos que los datos introducidos son correctos
-			
+
 			this.x1 = x1;
 			this.x2 = x2;
 		}
-		
+
 		if (y2 > y1) { // comprobamos que los datos introducidos son correctos
-			
+
 			this.y1 = y1;
 			this.y2 = y2;
 		}
 	}
+
+	/**
+	 * metodo get para obtener el valor de la coordenada X1
+	 * 
+	 * @return delvuelve el valor de x1
+	 */
+	public int getX1() {
+		return x1;
+	}
+
+	/**
+	 * metodo set para establecer un valor a la coordenada x1
+	 * 
+	 * @param x1
+	 */
+	public void setX1(int x1) {
+		
+		if (this.x2 < this.x1) 
+		this.x1 = x1;
+	}
+
+	/**
+	 * metodo get para obtener el valor de la coordenada X2
+	 * 
+	 * @return devuelve el valor de x2
+	 */
+	public int getX2() {
+		return x2;
+	}
+
+	/**
+	 * metodo set para establecer un valor a la coordenada x2
+	 * 
+	 * @param x2
+	 */
+	public void setX2(int x2) {
+		this.x2 = x2;
+	}
+
+	/**
+	 * metodo get para obtener el valor de la coordenada Y1
+	 * 
+	 * @retur ndevuelve el valor de y1
+	 */
+	public int getY1() {
+		return y1;
+	}
+
+	/**
+	 * metodo set para establecer un valor a la coordenada y1
+	 * 
+	 * @param y1
+	 */
+	public void setY1(int y1) {
+		this.y1 = y1;
+	}
+
+	/**
+	 * metodo get para obtener el valor de la coordenada Y2
+	 * 
+	 * @return devuelve el valor de y2
+	 */
+	public int getY2() {
+		return y2;
+	}
+
+	/**
+	 * metodo set para establecer un valor a la coordenada y2
+	 * 
+	 * @param y2
+	 */
+	public void setY2(int y2) {
+		this.y2 = y2;
+	}
+	
+	
 }

@@ -24,7 +24,7 @@ public class PrincipalArticulo {
 		Articulo art4 = new Articulo("Avena", 5.20, 21, -2);
 
 		// mostramos el mensaje
-		System.out.println(art1.nombre + " - " + "Precio:" + art1.precio + "€ - IVA:" + art1.IVA + "% - PVP:"
+		System.out.println(art1.getNombre() + " - " + "Precio:" + art1.precio + "€ - IVA:" + art1.IVA + "% - PVP:"
 				+ (art1.precio * (art1.IVA / 100)));
 		System.out.println();
 		

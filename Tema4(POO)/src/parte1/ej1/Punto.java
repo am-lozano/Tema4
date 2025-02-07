@@ -41,21 +41,41 @@ public class Punto {
 
 	}
 
+	/**
+	 * metodo get para obtener el valor de la coordenada X
+	 * 
+	 * @return devuelve el valor de X
+	 */
 	public int getX() {
 		
 		return x;
 	}
-
+	
+	/**
+	 * metodo set para establecer un valor a X
+	 * 
+	 * @param x coordenada X
+	 */
 	public void setX(int x) {
 		
 		this.x = x;
 	}
 
+	/**
+	 * metodo get para obtener el valor de la coordenada Y
+	 * 
+	 * @return devuelve el valor de Y
+	 */
 	public int getY() {
 		
 		return y;
 	}
 
+	/**
+	 * metodo set para establecer un valor a Y
+	 * 
+	 * @param y coordenada Y
+	 */
 	public void setY(int y) {
 		
 		this.y = y;

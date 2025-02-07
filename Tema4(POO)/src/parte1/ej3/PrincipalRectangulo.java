@@ -19,7 +19,7 @@ public class PrincipalRectangulo {
 
 		// instanciamos 2 objetos Rectangulo
 		Rectangulo rec1 = new Rectangulo(0, 5, 0, 5);
-		Rectangulo rec2 = new Rectangulo(0, 5, 0, 5);
+		Rectangulo rec2 = new Rectangulo(7, 9, 2, 3);
 		
 		// variable para almacenar la medida de la base del rectangulo
 		int base;
@@ -29,12 +29,12 @@ public class PrincipalRectangulo {
 
 		// mostramos las coordenadas
 		System.out.println(
-				"Rectangulo 1:" + "(" + rec1.x1 + ", " + rec1.x2 + ") " + "(" + rec1.y1 + ", " + rec1.y2 + ")");
+				"Rectangulo 1:" + "(" + rec1.getX1() + ", " + rec1.getX2() + ") " + "(" + rec1.getY1() + ", " + rec1.getY2() + ")");
 		System.out.println();
 		
 		// calculamos cual es la longitud de la base y de la altura del rectangulo
-		base = Math.abs(rec1.x2 - rec1.x1);
-		altura = Math.abs(rec1.y2 - rec1.y1);
+		base = Math.abs(rec1.getX2() - rec1.getX1());
+		altura = Math.abs(rec1.getY2() - rec1.getY1());
 		
 		// calculamos el perimetro y lo imprimimos, para ello calcularemos cuanto mide la altura y la base del rectangulo
 		System.out.println("Perimetro rectangulo 1: " + (base * 2 + altura * 2) + " cm");
@@ -44,20 +44,16 @@ public class PrincipalRectangulo {
 		
 		// mostramos las coordenadas
 		System.out.println(
-				"Rectangulo 2:" + "(" + rec2.x1 + ", " + rec2.x2 + ") " + "(" + rec2.y1 + ", " + rec2.y2 + ")");
+				"Rectangulo 2:" + "(" + rec2.getX1() + ", " + rec2.getX2() + ") " + "(" + rec2.getY1() + ", " + rec2.getY2() + ")");
 		System.out.println();
 		
 		// calculamos cual es la longitud de la base y de la altura del rectangulo
-		base = Math.abs(rec2.x2 - rec2.x1);
-		altura = Math.abs(rec2.y2 - rec2.y1);
+		base = Math.abs(rec2.getX2() - rec2.getX1());
+		altura = Math.abs(rec2.getY2() - rec2.getY1());
 		
 		// calculamos el perimetro y lo imprimimos, para ello calcularemos cuanto mide la altura y la base del rectangulo
 		System.out.println("Perimetro rectangulo 1: " + (base * 2 + altura * 2) + " cm");
 		System.out.println("Area rectangulo 1: " + (base * altura) + " cm²");
-		
-		Math.abs(rec2.y2 - rec2.y2);
-		Math.abs(rec2.x2 - rec2.x2);
-		
 		
 
 	}

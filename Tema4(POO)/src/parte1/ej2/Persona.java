@@ -59,10 +59,20 @@ public class Persona {
 		}
 	}
 	
+	/**
+	 * metodo get para obtener el valor del DNI
+	 * 
+	 * @return devuelve el valor del dni
+	 */
 	public String getDni() {
 		return dni;
 	}
 	
+	/**
+	 * metodo set para establecer el valor del DNI
+	 * 
+	 * @param dni DNI de la persona
+	 */
 	public void setDni(String dni) {
 		
 		if (dni != null && !dni.isEmpty()) { // comprobamos que el dato es valido
@@ -71,11 +81,20 @@ public class Persona {
 		}
 	}
 	
-	
+	/**
+	 * metodo get para obtener el valor del nombre
+	 * 
+	 * @return delvuelve el valor del nombre
+	 */
 	public String getNombre() {
 		return nombre;
 	}
 	
+	/**
+	 * metodo set para obtener el valor del nombre
+	 * 
+	 * @param nombre nombre de la persona
+	 */
 	public void setNombre(String nombre) {
 		
 		if (nombre != null && !nombre.isEmpty()) { // comprobamos que el dato es valido
@@ -84,11 +103,20 @@ public class Persona {
 		}
 	}
 	
-	
+	/**
+	 * metodo get para obtener el apellido de la persona
+	 * 
+	 * @return delvuelve el valor del apellido
+	 */
 	public String getApellidos() {
 		return apellidos;
 	}
 	
+	/**
+	 * metodo set para establecer un valor al apellido
+	 * 
+	 * @param apellidos apellido de la persona
+	 */
 	public void setApellidos(String apellidos) {
 		
 		if (apellidos != null && !apellidos.isEmpty()) { // comprobamos que el dato es valido
@@ -97,10 +125,20 @@ public class Persona {
 		}
 	}
 	
+	/**
+	 * metodo get para obtener el valor de la edad
+	 * 
+	 * @return delvuelve el valor de la edad
+	 */
 	public int getEdad() {
 		return edad;
 	}
 	
+	/**
+	 *  metodo set para establecer el valor a la edad
+	 * 
+	 * @param edad edad de la persona
+	 */
 	public void setEdad(int edad) {
 		
 		if (edad > 0) { // comprobamos que el dato es valido
