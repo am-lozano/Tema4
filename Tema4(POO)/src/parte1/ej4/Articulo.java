@@ -70,7 +70,10 @@ public class Articulo {
 	 * @param nombre nombre del articulo
 	 */
 	public void setNombre(String nombre) {
-		this.nombre = nombre;
+		
+		if (nombre != null && !nombre.isEmpty()) {
+			this.nombre = nombre;
+		}
 	}
 
 	/**
@@ -88,7 +91,10 @@ public class Articulo {
 	 * @param precio precio del articulo
 	 */
 	public void setPrecio(double precio) {
-		this.precio = precio;
+		
+		if (precio > 0) {
+			this.precio = precio;			
+		}
 	}
 
 	/**
@@ -99,8 +105,6 @@ public class Articulo {
 	public int getCuantosQuedan() {
 		return cuantosQuedan;
 	}
-	
-	comprobar datos introducidos
 
 	/**
 	 * metodo set para establecer un valor de cuantos quedan
@@ -108,7 +112,10 @@ public class Articulo {
 	 * @param cuantosQuedan numero de articulos que quedan
 	 */
 	public void setCuantosQuedan(int cuantosQuedan) {
-		this.cuantosQuedan = cuantosQuedan;
+		
+		if (cuantosQuedan >= 0) {			
+			this.cuantosQuedan = cuantosQuedan;
+		}
 	}
 
 	/**

@@ -25,6 +25,24 @@ public class Punto {
 	 * setX(int x) y setY(int y). Tanto getters como setters deben ser public.
 	 */
 
+	/*
+	 * public void setXY(int x, int y): Modifica ambas coordenadas. Es como un
+	 * setter doble.
+	 * 
+	 * public void desplaza(int dx, int dy): Desplaza el punto la cantidad (dx,dy)
+	 * indicada. Ejemplo: Si el punto (1,1) se desplaza (2,5) entonces estará en
+	 * (3,6).
+	 * 
+	 * public double distancia(Punto p): Calcula y devuelve la distancia entre el
+	 * propio objeto (this) y otro objeto (Punto p) que se pasa como parámetro.
+	 * Prueba a utilizar estos métodos desde el main para comprobar su
+	 * funcionamiento. (NOTA: distancia entre dos coordenadas).
+	 * 
+	 * public String toString(): Devuelve una cadena con los valores de las
+	 * coordenadas. Ejemplo: “(7, -5)”
+	 * 
+	 */
+
 	private int x;
 	private int y;
 
@@ -47,17 +65,17 @@ public class Punto {
 	 * @return devuelve el valor de X
 	 */
 	public int getX() {
-		
+
 		return x;
 	}
-	
+
 	/**
 	 * metodo set para establecer un valor a X
 	 * 
 	 * @param x coordenada X
 	 */
 	public void setX(int x) {
-		
+
 		this.x = x;
 	}
 
@@ -67,7 +85,7 @@ public class Punto {
 	 * @return devuelve el valor de Y
 	 */
 	public int getY() {
-		
+
 		return y;
 	}
 
@@ -77,9 +95,43 @@ public class Punto {
 	 * @param y coordenada Y
 	 */
 	public void setY(int y) {
-		
+
+		this.y = y;
+	}
+	
+	/**
+	 * metodo para asignar unas nuevas coordenas al punto
+	 * 
+	 * @param x coordenada X del punto
+	 * @param y coordenada Y del punto
+	 */
+	public void setXY(int x, int y) {
+
+		this.x = x;
 		this.y = y;
 	}
 
-	
+	/**
+	 * metodo para desplazar el punto segun las coordenadas indicadas
+	 * 
+	 * @param dx distancia que se le anade a la coodena X del punto
+	 * @param dy distancia que se le anade a la coodena Y del punto
+	 */
+	public void desplaza(int dx, int dy) {
+
+		this.x = dx + x;
+		this.y = dy + y;
+	}
+
+	/**
+	 * metodo para calcular la distancia entre un punto P y el punto de la clase
+	 * 
+	 * @param p punto nuevo P
+	 * @return devuelve la distancia entre los 2 puntos
+	 */
+	public double distancia(Punto p) {
+		
+		return 2;
+	}
+
 }

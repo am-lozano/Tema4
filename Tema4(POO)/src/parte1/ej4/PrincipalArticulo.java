@@ -24,23 +24,23 @@ public class PrincipalArticulo {
 		Articulo art4 = new Articulo("Avena", 5.20, 21, -2);
 
 		// mostramos el mensaje
-		System.out.println(art1.getNombre() + " - " + "Precio:" + art1.precio + "€ - IVA:" + art1.IVA + "% - PVP:"
-				+ (art1.precio * (art1.IVA / 100)));
+		System.out.println(art1.getNombre() + " - " + "Precio:" + art1.getNombre() + "€ - IVA:" + art1.getIVA() + "% - PVP:"
+				+ (art1.getPrecio() * (art1.getIVA() / 100)));
 		System.out.println();
 		
 		// comprobamos el dato String (nombre del producto)
-		System.out.println(art2.nombre + " - " + "Precio:" + art2.precio + "€ - IVA:" + art2.IVA + "% - PVP:"
-				+ (art2.precio * (art2.IVA / 100)));
+		System.out.println(art2.getNombre() + " - " + "Precio:" + art2.getPrecio() + "€ - IVA:" + art2.getIVA() + "% - PVP:"
+				+ (art2.getPrecio() * (art2.getIVA() / 100)));
 		System.out.println();
 		
 		// comprobamos el dato del precio
-		System.out.println(art3.nombre + " - " + "Precio:" + art3.precio + "€ - IVA:" + art3.IVA + "% - PVP:"
-				+ (art3.precio * (art3.IVA / 100)));
+		System.out.println(art3.getNombre() + " - " + "Precio:" + art3.getPrecio() + "€ - IVA:" + art3.getIVA() + "% - PVP:"
+				+ (art3.getPrecio() * (art3.getIVA() / 100)));
 		System.out.println();
 		
 		// comprobamos el dato de cuantos quedan
-		System.out.println(art4.nombre + " - " + "Precio:" + art4.precio + "€ - IVA:" + art4.IVA + "% - PVP:"
-				+ (art4.precio * (art4.IVA / 100)));
+		System.out.println(art4.getNombre() + " - " + "Precio:" + art4.getPrecio() + "€ - IVA:" + art4.getIVA() + "% - PVP:"
+				+ (art4.getPrecio() * (art4.getIVA() / 100)));
 		System.out.println();
 
 	}
