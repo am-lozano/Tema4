@@ -6,11 +6,6 @@ public class SumaPrincipal {
 
 	public static void main(String[] args) {
 		
-		// instanciamos 2 objetos de la clase sumaNumeros
-		SumaNumeros sumaEnteros = new SumaNumeros();
-		SumaNumeros sumaDecimal = new SumaNumeros();
-		
-		
 		// mostramos la suma de dos numeros enteros
 		System.out.println(SumaNumeros.suma(1, 2));
 		
