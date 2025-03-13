@@ -1,5 +1,7 @@
 package parte3.ej5;
 
+import java.util.Random;
+
 public class aleatorios {
 
 	/*
@@ -19,7 +21,32 @@ public class aleatorios {
 	 * El primero indica la cantidad de números aleatorios a generar
 	 * El segundo indica el valor mínimo que tomará el número aleatorio.
 	 * El tercero indica el valor máximo que tomará el número aleatorio.
-	 * 
 	 */
+	
+	static int generarAleatorio (int num) {
+		
+		// clase random para generar numeros aleatorios
+		Random rand = new Random();
+		
+		// variable para almacenar los numeros aleatorios generados
+		int aleatorio;
+		
+		for (int i = 0; i < num; i++) {
+			
+			// generamos un numero aleatorio y lo almacenamos en la variable
+			aleatorio = rand.nextInt();
+			
+			if (i < num) {
+				
+				
+			} else {
+				
+			}
+			
+			
+		}
+		return 0;
+		
+	}
 
 }

@@ -1,10 +1,12 @@
-package parte2.alumno;
+package crud.alumno;
+
+import java.util.Objects;
 
 public class Alumno {
 
-	private String nombre;
+	private String nombre = "Anonimo";
 
-	private double nota;
+	private double nota = 0;
 
 	public Alumno(String nombre, double nota) {
 
@@ -43,18 +45,6 @@ public class Alumno {
 		return nombre + " " + nota;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-
-		boolean iguales = false;
-		
-		Alumno alumNuevo = (Alumno) obj;
-		
-		if (this.nombre.equals(alumNuevo.nombre)) {
-			iguales = true;
-		}
-		
-		return iguales;
-	}
+	
 
 }
