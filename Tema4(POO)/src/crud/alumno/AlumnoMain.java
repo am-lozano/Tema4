@@ -15,6 +15,8 @@ public class AlumnoMain {
 		double nota = 0;
 
 		Alumno alumn;
+		
+		double notaNueva = 0;
 
 		do {
 
@@ -48,7 +50,11 @@ public class AlumnoMain {
 				
 				alumn = crearAlumn();
 				
-				if (AlumnoCRIUD.modificarAlum(nombre, nota)) {
+				System.out.println("Introduzca la nota nueva del alumno:");
+				notaNueva = sc.nextDouble();
+				sc.nextLine();
+				
+				if (AlumnoCRIUD.modificarAlum(nombre, nota, notaNueva)) {
 					
 					System.out.println("Modificacion realizada");
 					

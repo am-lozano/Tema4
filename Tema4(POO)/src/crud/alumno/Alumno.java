@@ -21,7 +21,7 @@ public class Alumno {
 	}
 
 	public String getNombre() {
-		return nombre;
+		return this.nombre;
 	}
 
 	public void setNombre(String nombre) {
@@ -31,7 +31,7 @@ public class Alumno {
 	}
 
 	public double getNota() {
-		return nota;
+		return this.nota;
 	}
 
 	public void setNota(double nota) {
@@ -45,6 +45,19 @@ public class Alumno {
 		return nombre + " " + nota;
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(nombre, nota);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		Alumno other = (Alumno) obj;
+		return Objects.equals(nombre, other.nombre)
+				&& Double.doubleToLongBits(nota) == Double.doubleToLongBits(other.nota);
+	}
+
+	
 	
 
 }
