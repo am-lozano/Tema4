@@ -1,5 +1,7 @@
 package examen;
 
+import java.util.Objects;
+
 public class Empleado {
 
 	/**
@@ -175,7 +177,7 @@ public class Empleado {
 	@Override
 	public String toString() {
 
-		return dni + " " + nombre + "\n" + "Horas Extras: " + horasExtras + "\n" + "Sueldo Bruto: " + sueldoBruto();
+		return dni + " " + nombre + "\n" + "Horas Extras: " + horasExtras + "\n" + "Sueldo Bruto: " + sueldoBruto() + "\n";
 	}
 	
 	/**
@@ -196,5 +198,12 @@ public class Empleado {
 		
 		return res;
 	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(dni);
+	}
+	
+	
 
 }

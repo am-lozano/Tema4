@@ -15,7 +15,17 @@ public class EmpleadoMain {
 		// creamos un objeto para inicializarlo posteriormente con los datos y la opcion elegida en el menu
 		Empleado empleado;
 		
-		do { // bucle para pedir una opcion del menu mientras no se elija salir
+		String dni;
+		
+		int horas;
+		
+		double horasNuevas;
+		
+		System.out.println("Bienvenido");
+		
+		do { // bucle para pedir una opcion del menu mientras no se elija saliraf
+			
+			menu();
 			
 			// pedimos la opcion del menu
 			System.out.println("Introduzca una opcion");
@@ -31,10 +41,65 @@ public class EmpleadoMain {
 				// creamos un nuevo empleado con los datos introducidos
 				empleado = creaEmpleado();
 				
-//				if (ListadoEmpleado.nuevoEmpleado(empleado)) {
-//					
-//				}
-			}
+				if (ListadoEmpleado.nuevoEmpleado(empleado)) {
+					
+					System.out.println("Anadido correctamente");
+					
+				} else {
+					
+					System.out.println("No se ha anadido");
+				}
+				
+			} case 2 -> { // Listar empleados.
+				
+				ListadoEmpleado.listarEmpleado();
+				
+			} case 3 -> { // Modificar horas extra.
+				
+				dni = pideDni();
+				
+				horas = pideHorasExtras();
+				
+				if (ListadoEmpleado.modificarHoras(dni, horas)) {
+					
+					System.out.println("Modificado correctamente");
+					
+				} else {
+					
+					System.out.println("Error");
+				}
+				
+			} case 4 -> { // Modificar importe horas extra.
+				
+				horasNuevas = pideImporte();
+				
+				if (ListadoEmpleado.modificarImporte(horasNuevas)) {
+					
+					System.out.println("Modificado correctamente");
+					
+				} else {
+					
+					System.out.println("Error");
+				}
+				
+			} case 5 -> { // Eliminar empleado.
+				
+				// creamos un nuevo empleado con los datos introducidos
+				empleado = creaEmpleado();
+				
+				if (ListadoEmpleado.eliminarEmpleado(empleado)) {
+					
+					System.out.println("Eliminado correctamente");
+					
+				} else {
+					
+					System.out.println("Error");
+				}
+				
+			} case 0 -> {
+				System.out.println("Saliendo del sistema…");
+				
+			} default -> System.out.println("Opcion incorrecta");
 			}
 			
 		} while (opcion != 0);
@@ -45,7 +110,7 @@ public class EmpleadoMain {
 	}
 	
 	// metodo para mostrar el menu de opciones
-	public void menu() {
+	public static void menu() {
 		
 		System.out.println("1. Añadir empleado.\r\n"
 				+ "2. Listar empleados.\r\n"
@@ -60,7 +125,7 @@ public class EmpleadoMain {
 		
 		String dni;
 		
-		System.out.println("Introduzca el nombre:");
+		System.out.println("Introduzca el dni:");
 		dni = sc.nextLine();
 		
 		return dni;
@@ -94,7 +159,7 @@ public class EmpleadoMain {
 		
 		int horas;
 		
-		System.out.println("Introuzca el sueldo base:");
+		System.out.println("Introuzca las horas extras:");
 		horas = sc.nextInt();
 		sc.nextLine();
 		
@@ -114,7 +179,7 @@ public class EmpleadoMain {
 	}
 	
 	// funcion para crear un empleado con los datos pedidos
-	private static Empleado creaEmpleado() {
+	public static Empleado creaEmpleado() {
 		
 		String dni = pideDni();
 		String nombre = pideNombre();

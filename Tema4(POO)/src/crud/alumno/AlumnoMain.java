@@ -54,7 +54,7 @@ public class AlumnoMain {
 				notaNueva = sc.nextDouble();
 				sc.nextLine();
 				
-				if (AlumnoCRIUD.modificarAlum(nombre, nota, notaNueva)) {
+				if (AlumnoCRIUD.modificarAlum(alumn, notaNueva)) {
 					
 					System.out.println("Modificacion realizada");
 					

@@ -1,11 +1,10 @@
 package crud.alumno;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
 
 public class AlumnoCRIUD {
 	
-	private static Set<Alumno> lista = new HashSet<Alumno>();
+	private static ArrayList<Alumno> lista = new ArrayList<Alumno>();
 	
 	public static void mostrarLista () {
 		
@@ -19,11 +18,11 @@ public class AlumnoCRIUD {
 		return lista.add(alum);
 	}
 	
-	public static boolean modificarAlum (String nombre, double media, double mediaNueva) {
+	public static boolean modificarAlum (Alumno al, double mediaNueva) {
 		
 		boolean res = false;
 		
-		Alumno alumno = buscarAlumno(nombre, media);
+		Alumno alumno = buscarAlumno(al);
 		
 		if(alumno != null) {
 			alumno.setNota(mediaNueva);	
@@ -37,15 +36,13 @@ public class AlumnoCRIUD {
 		return lista.remove(alum);
 	}
 	
-	private static Alumno buscarAlumno(String nombre, double media) {
+	private static Alumno buscarAlumno(Alumno al) {
 		 
 		Alumno alumn = null;
 		
 		for(Alumno alumno : lista) {
-			if(alumno.getNombre().equalsIgnoreCase(nombre) && alumno.getNota() == media) {
-				System.out.println(alumn);
+			if(alumno.equals(al)) {
 				alumn = alumno;
-				System.out.println(alumn);
 			}
 		}
 		
